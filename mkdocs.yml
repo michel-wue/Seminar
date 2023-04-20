@@ -1,9 +1,0 @@
-site_name: PDS Handelsregister Gruppe 5
-site_description: Dokumentation PDS Handelsregister Gruppe 5
-repo_url: https://github.com/joschikahn/DokuPdsHandelsregisterGroup5
-theme: readthedocs
-docs_dir: 'docs'
-nav:
-    - 'Grundlagen': 'index.md'
-    - 'App' : 'app.md'
-    - 'Vorbereitung & verworfene Ansätze' : 'vorbereitung_verworfeneAnsätze.md'
