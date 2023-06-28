@@ -17,4 +17,15 @@ In diesem Notebook wird aufgezeigt, wie der Datensatz generiert wurde
     - Und ein Feature, das anzeigt wie viele Scoring-Spielzüge das zurückliegende Team benötigt, um den Punktestand auszugleichen
 
 ### Notebook: EDA (Expolrative Daten Analyse) 📊
+Hier werden verschiedene Grafiken generiert, die zum Verständnis der Daten beitragen:
+- Eine Korrelationsmatrix: Sie zeigt die Korrelationen der Features untereinander an
+- Ein Balken-Diagramm um zu visualisieren der Verteilung der Klassen im Datensatz
+- Ein Balken-Diagramm, das aufzeigt in welchem Yardintervall die meisten Punkte erzielt werden
+- Die Anderen Grafiken, die sich im Notebook verwendet, werden nicht für diese Arbeit verwendet
+
+ ### Notebook: Training 🧠
+ In diesem Notebook wird dargelegt, wie die einzelnen Modelle trainiert wurden
+ -XGBoost: Early-Stopping-Methode
+ -Random Forest: Da es keine Early-stopping Methode gab, wurde hierzu manuell die beste Baumgröße evaluiert und anschließend mit dieser Größe das Modell trainiert
+ -TabNet: Early-Stopping-Methode
 
