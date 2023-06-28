@@ -25,7 +25,7 @@ Hier werden verschiedene Grafiken generiert, die zum Verständnis der Daten beit
 
  ### Notebook: Training 🧠
  In diesem Notebook wird dargelegt, wie die einzelnen Modelle trainiert wurden
- -XGBoost: Early-Stopping-Methode
- -Random Forest: Da es keine Early-stopping Methode gab, wurde hierzu manuell die beste Baumgröße evaluiert und anschließend mit dieser Größe das Modell trainiert
- -TabNet: Early-Stopping-Methode
+ - XGBoost: Early-Stopping-Methode
+ - Random Forest: Da es keine Early-stopping Methode gab, wurde hierzu manuell die beste Baumgröße evaluiert und anschließend mit dieser Größe das Modell trainiert
+ - TabNet: Early-Stopping-Methode
 
