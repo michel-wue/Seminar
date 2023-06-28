@@ -42,5 +42,5 @@ Abschließend werden einzelne Spiele und Saisons genauer betrachtet. Dazu wurde 
 - Anschließend wurden die Plays extrahiert und analysiert, die für die Veränderung der Gewinnwahrscheinlichkeit verantwortlich waren
 
 Im letzten Teil des Notebooks wurde das beste Passing Play (ohne Passing Touchdowns) der Saison 2022 ermittelt. Dazu wurden alle Passing Plays der Saison gefiltert und das Play mit dem größten Einfluss auf die Gewinnwahrscheinlichkeit ausgewählt.
-Ein Play hatte einen höheren Einfluss auf die Wahrscheinlichkeit als das in meiner Arbeit erwähnte Play. Dies lag jedoch daran, dass das Play nicht als Touchdown-Pass von der API erkannt wurde.  
+ 
 
