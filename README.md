@@ -1,46 +1,46 @@
 # Seminararbeit SS 2023 Michel Bauer 📖	🏈
 ## Die Struktur dieses Github-Repository basiert auf Kapitel 3 meiner Seminararbeit. Es zeigt die jeweiligen Schritte auf, die unternommen wurden, um den Datensatz zu generieren, eine explorative Datenanalyse durchzuführen, die Modelle zu testen, zu evaluieren und die Anwendbarkeit der Modelle aufzuzeigen.
 
-### Da der finale Datensatz und das Modell TabNet zu groß sind, wurden zwei Release getätigt
+### Da der endgültige Datensatz und das TabNet-Modell zu umfangreich sind, wurden zwei Versionen erstellt.
 - Der erste Release beinhaltet den finalen Datensatz
-- Der zweite Release die drei trainierten Modelle XGBoost, Random Forest und TabNet
+- Der zweite Release beinhaltet die drei trainierten Modelle XGBoost, Random Forest und TabNet
 
 ### Notebook: Datensatz 💾
-In diesem Notebook wird aufgezeigt, wie der Datensatz generiert wurde
-- Zuerst wurde mit der ESPN-API ein play-by-play Datensatz generiert
-- Mithilfe der ESPN- und der FiveThirtyEight-API die Elozahlen für die Teams generiert. Dabei wurden die Elozahlen genommen, die füraktuelle Saison und Woche aktuell waren
+Dieses Notizbuch zeigt, wie der Datensatz generiert wurde
+- Zuerst wurde mit der ESPN-API ein Play-by-Play-Datensatz generiert
+- Mit Hilfe den APIs von ESPN und FiveThirtyEight wurden die Elozahlen für die Teams generiert. Dabei wurden die aktuellen Elozahlen für die aktuelle Saison und Woche verwendet
 - Zuzästlich wurde mit Hilfe der ESPN-API die Zuschauerquote im Stadium extrahiert
-- Anhand dieses Datnsatzes wurden weitere Features gebildet
-    - Die verbleibende Zeit im Spiel
-    - Der Punkteabstand zwischen den zwei Teams
+- Aus diesem Datensatz wurden weitere Merkmale gebildet
+    - Die verbleibende Spielzeit
+    - Der Punkteabstand zwischen den beiden Mannschaften
     - Das aktuell führende Team
-    - Und ein Feature, das anzeigt wie viele Scoring-Spielzüge das zurückliegende Team benötigt, um den Punktestand auszugleichen
+    - Und ein Feature, das anzeigt, wie viele Scoring Plays das zurückliegende Team benötigt, um den Punktestand auszugleichen.
 
 ### Notebook: EDA (Expolrative Daten Analyse) 📊
-Hier werden verschiedene Grafiken generiert, die zum Verständnis der Daten beitragen:
-- Eine Korrelationsmatrix: Sie zeigt die Korrelationen der Features untereinander an
-- Ein Balken-Diagramm um zu visualisieren der Verteilung der Klassen im Datensatz
-- Ein Balken-Diagramm, das aufzeigt in welchem Yardintervall die meisten Punkte erzielt werden
-- Die Anderen Grafiken, die sich im Notebook befinden, werden nicht für diese Arbeit verwendet
+Hier werden verschiedene Grafiken erzeugt, die zum Verständnis der Daten beitragen:
+- Eine Korrelationsmatrix: Sie zeigt die Korrelationen zwischen den Merkmalen
+- Ein Balkendiagramm, um die Verteilung der Klassen im Datensatz zu visualisieren
+- Ein Balkendiagramm, das zeigt, in welchem Yard-Intervall die meisten Punkte erzielt werden
+- Die anderen Diagramme im Notebook werden für diese Arbeit nicht verwendet.
 
  ### Notebook: Training 🧠
- In diesem Notebook wird dargelegt, wie die einzelnen Modelle trainiert wurden. Dabei wird aufgezeigt, wie die Trainings-, Valdierungs-, und Trainingsdatensätze aufgeteilt wurden. Außerdem wird dargelegt, wie die einzelnen Preprocessingschritte umgesetzt wurden. Die Modelle wurden mit folgenden Methoden trainiert:
+ In diesem Notebook wird dargelegt, wie die einzelnen Modelle trainiert wurden.  Es wird gezeigt, wie die Trainings-, Validierungs- und Trainingsdatensätze aufgeteilt wurden.  Darüber hinaus wird beschrieben, wie die  Preprocessingschritte durchgeführt wurden. Die Modelle wurden mit den folgenden Methoden trainiert:
  - XGBoost: Early-Stopping-Methode
  - Random Forest: Da es keine Early-stopping Methode gab, wurde hierzu manuell die beste Baumgröße evaluiert und anschließend mit dieser Größe das Modell trainiert
  - TabNet: Early-Stopping-Methode
 
 ### Notebook: Evaluation 📈
-Dieses Notebook, zeigt auf, wie die Accuarcy für den ganzen Datensatz berechnet werden und wie die Plots generiert werden, die darstellen wie die einzelnen Modelle in bestimmten Zeitintervallen performen. Im nächsten Schritt wird der datensatz nach bestimmten Kriterien gefiltert:
-- Es werden nur Spielzüge betrachtet wo es gerade Unentschieden zwischen den Teams steht
-- Spielzüge, wo das zurückliegende Teams mindest ein Scoring-Play braucht, um den Punktestand auszugleichen
-- Spielzüge, wo das zurückliegende Teams mindest zwei Scoring-Plays braucht, um den Punktestand auszugleichen
-dannach wurde die gleiche Vorgehensweise angewendet, die beim ganzem Datensatz angewendet wurde
+Dieses Notebook zeigt, wie die Accuracy für den gesamten Datensatz berechnet wird und wie die Diagramme erzeugt werden, die zeigen, wie sich die einzelnen Modelle in bestimmten Zeitintervallen verhalten. Im nächsten Schritt wird der Datensatz nach bestimmten Kriterien gefiltert:
+- Es werden nur Spielzüge betrachtet, bei denen es gerade Unentschieden zwischen den Teams steht
+- Spielzüge, bei denen das zurückliegende Team mindestens ein Scoring-Play benötigt, um den Spielstand auszugleichen
+- Spielzüge, in denen das zurückliegende Team mindestens zwei Scoring Plays benötigt, um den Spielstand auszugleichen.
+Anschließend wurde das gleiche Verfahren wie für den gesamten Datensatz angewendet.
 
 ### Notebook: Anwendung 🔨
-Zum Schluss wird in diesem Notebook einzelne Spiele und Saison genauer Untersucht. Hierzu wurde mit dem XGBoost-Modell das Spiel Detroit Lions vs. Cincinnati Bengals (Saison 2022, Woche 10) genauer analysiert. Folgende Schritte wurden unternommen:
-- Zuerst wurde der Verlauf der Gewinnwahrscheinlichkeiten der beiden Teams visualisiert
-- Im Schluss wurden die Plays die die Ursache dafür waren, dass sich die Gewinnwahrscheinlichkeit ändert extrahiert und analysiert
+Abschließend werden einzelne Spiele und Saisons genauer betrachtet. Dazu wurde das Spiel Detroit Lions vs. Cincinnati Bengals (Saison 2022, Woche 10) mit dem Modell XGBoost genauer analysiert. Folgende Schritte wurden durchgeführt:
+- Zunächst wurde der Verlauf der Gewinnwahrscheinlichkeiten der beiden Mannschaften visualisiert
+- Anschließend wurden die Plays extrahiert und analysiert, die für die Veränderung der Gewinnwahrscheinlichkeit verantwortlich waren
 
-Im letztem Teil des Notebooks wurde das beste "Passing-Play" (keine Passing Touchdowns) aus der Saison 2022 ermittelt. Dazu wurden allle Passing-Plays aus der saison gefiltertund das Play mit höchsten Einfluss auf die Gewinnwahrscheinlichkeit wurde herausgesucht.
-Ein Play hatte einen höheren Einflusss auf die Wahrscheinlichkeit, als das play das in meiner Arbeit erwähnt wurde. Dies lag aber daran, dass das Play nicht als Touchdown-Pass von der API vermekt wurde. 
+Im letzten Teil des Notebooks wurde das beste Passing Play (ohne Passing Touchdowns) der Saison 2022 ermittelt. Dazu wurden alle Passing Plays der Saison gefiltert und das Play mit dem größten Einfluss auf die Gewinnwahrscheinlichkeit ausgewählt.
+Ein Play hatte einen höheren Einfluss auf die Wahrscheinlichkeit als das in meiner Arbeit erwähnte Play. Dies lag jedoch daran, dass das Play nicht als Touchdown-Pass von der API erkannt wurde.  
 
