@@ -1,7 +1,7 @@
 # Seminararbeit SS 2023 Michel Bauer 📖	🏈
 ## Die Struktur dieses Github-Repository basiert auf Kapitel 3 meiner Seminararbeit. Es zeigt die jeweiligen Schritte auf, die unternommen wurden, um den Datensatz zu generieren, eine explorative Datenanalyse durchzuführen, die Modelle zu testen, zu evaluieren und die Anwendbarkeit der Modelle aufzuzeigen.
 
-### Da der finale Datensatz und das Modell TabNet zu groß sind wurden zwei Release getätigt
+### Da der finale Datensatz und das Modell TabNet zu groß sind, wurden zwei Release getätigt
 - Der erste Release beinhaltet den finalen Datensatz
 - Der zweite Release die drei trainierten Modelle XGBoost, Random Forest und TabNet
 
@@ -21,7 +21,7 @@ Hier werden verschiedene Grafiken generiert, die zum Verständnis der Daten beit
 - Eine Korrelationsmatrix: Sie zeigt die Korrelationen der Features untereinander an
 - Ein Balken-Diagramm um zu visualisieren der Verteilung der Klassen im Datensatz
 - Ein Balken-Diagramm, das aufzeigt in welchem Yardintervall die meisten Punkte erzielt werden
-- Die Anderen Grafiken, die sich im Notebook verwendet, werden nicht für diese Arbeit verwendet
+- Die Anderen Grafiken, die sich im Notebook befinden, werden nicht für diese Arbeit verwendet
 
  ### Notebook: Training 🧠
  In diesem Notebook wird dargelegt, wie die einzelnen Modelle trainiert wurden. Dbei wird aufgezeigt, wie die Trainings-, Valdierungs-, und Trainingsdatensätze aufgeteilt wurden. Außerdem wird dargelegt, wie die einzelnen Preprocessingschritte umgesetzt wurden. Die Modelle wurden mit folgenden Methoden trainiert:
@@ -30,4 +30,11 @@ Hier werden verschiedene Grafiken generiert, die zum Verständnis der Daten beit
  - TabNet: Early-Stopping-Methode
 
 ### Notebook: Evaluation 📈
+Dieses Notebook, zeigt auf, wie die Accuarcy für den ganzen Datensatz berechnet werden und wie die Plots generiert werden, die darstellen wie die einzelnen Modelle in bestimmten Zeitintervallen performen. Im nächsten Schritt wird der datensatz nach bestimmten Kriterien gefiltert:
+- Es werden nur Spielzüge betrachtet wo es gerade Unentschieden zwischen den Teams steht
+- Spielzüge, wo das zurückliegende Teams mindest ein Scoring-Play braucht, um den Punktestand auszugleichen
+- Spielzüge, wo das zurückliegende Teams mindest zwei Scoring-Plays braucht, um den Punktestand auszugleichen
+dannach wurde die gleiche Vorgehensweise angewendet, die beim ganzem Datensatz angewendet wurde
+
+### Notebook: Anwendung
 
