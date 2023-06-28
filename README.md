@@ -6,7 +6,7 @@
 - Der zweite Release beinhaltet die drei trainierten Modelle XGBoost, Random Forest und TabNet
 
 ### Notebook: Datensatz 💾
-Dieses Notizbuch zeigt, wie der Datensatz generiert wurde
+Dieses Notebook zeigt, wie der Datensatz generiert wurde
 - Zuerst wurde mit der ESPN-API ein Play-by-Play-Datensatz generiert
 - Mit Hilfe den APIs von ESPN und FiveThirtyEight wurden die Elozahlen für die Teams generiert. Dabei wurden die aktuellen Elozahlen für die aktuelle Saison und Woche verwendet
 - Zuzästlich wurde mit Hilfe der ESPN-API die Zuschauerquote im Stadium extrahiert
