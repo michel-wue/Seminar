@@ -29,3 +29,5 @@ Hier werden verschiedene Grafiken generiert, die zum Verständnis der Daten beit
  - Random Forest: Da es keine Early-stopping Methode gab, wurde hierzu manuell die beste Baumgröße evaluiert und anschließend mit dieser Größe das Modell trainiert
  - TabNet: Early-Stopping-Methode
 
+### Notebook: Evaluation 📈
+
