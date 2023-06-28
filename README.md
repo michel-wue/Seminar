@@ -24,7 +24,7 @@ Hier werden verschiedene Grafiken generiert, die zum Verständnis der Daten beit
 - Die Anderen Grafiken, die sich im Notebook befinden, werden nicht für diese Arbeit verwendet
 
  ### Notebook: Training 🧠
- In diesem Notebook wird dargelegt, wie die einzelnen Modelle trainiert wurden. Dbei wird aufgezeigt, wie die Trainings-, Valdierungs-, und Trainingsdatensätze aufgeteilt wurden. Außerdem wird dargelegt, wie die einzelnen Preprocessingschritte umgesetzt wurden. Die Modelle wurden mit folgenden Methoden trainiert:
+ In diesem Notebook wird dargelegt, wie die einzelnen Modelle trainiert wurden. Dabei wird aufgezeigt, wie die Trainings-, Valdierungs-, und Trainingsdatensätze aufgeteilt wurden. Außerdem wird dargelegt, wie die einzelnen Preprocessingschritte umgesetzt wurden. Die Modelle wurden mit folgenden Methoden trainiert:
  - XGBoost: Early-Stopping-Methode
  - Random Forest: Da es keine Early-stopping Methode gab, wurde hierzu manuell die beste Baumgröße evaluiert und anschließend mit dieser Größe das Modell trainiert
  - TabNet: Early-Stopping-Methode
@@ -37,4 +37,9 @@ Dieses Notebook, zeigt auf, wie die Accuarcy für den ganzen Datensatz berechnet
 dannach wurde die gleiche Vorgehensweise angewendet, die beim ganzem Datensatz angewendet wurde
 
 ### Notebook: Anwendung
+Zum Schluss wird in diesem Notebook einzelne Spiele und Saison genauer Untersucht. Hierzu wurde mit dem XGBoost-Modell das Spiel Detroit Lions vs. Cincinnati Bengals (Saison 2022, Woche 10) genauer analysiert. Folgende Schritte wurden unternommen:
+- Zuerst wurde der Verlauf der Gewinnwahrscheinlichkeiten der beiden Teams visualisiert
+- Im Schluss wurden die Plays die die Ursache dafür waren, dass sich die Gewinnwahrscheinlichkeit ändert extrahiert und analysiert
+Im letztem Teil des Notebooks wurde das beste "Passing-Play" (keine Passing Touchdowns) aus der Saison 2022 ermittelt. Dazu wurden allle Passing-Plays aus der saison gefiltertund das Play mit höchsten Einfluss auf die Gewinnwahrscheinlichkeit wurde herausgesucht.
+Ein Play hatte einen höheren Einflusss auf die Wahrscheinlichkeit, als das play das in meiner Arbeit erwähnt wurde. Dies lag aber daran, dass das Play nicht als Touchdown-Pass von der API vermekt wurde. 
 
