@@ -36,10 +36,11 @@ Dieses Notebook, zeigt auf, wie die Accuarcy für den ganzen Datensatz berechnet
 - Spielzüge, wo das zurückliegende Teams mindest zwei Scoring-Plays braucht, um den Punktestand auszugleichen
 dannach wurde die gleiche Vorgehensweise angewendet, die beim ganzem Datensatz angewendet wurde
 
-### Notebook: Anwendung
+### Notebook: Anwendung 🔨
 Zum Schluss wird in diesem Notebook einzelne Spiele und Saison genauer Untersucht. Hierzu wurde mit dem XGBoost-Modell das Spiel Detroit Lions vs. Cincinnati Bengals (Saison 2022, Woche 10) genauer analysiert. Folgende Schritte wurden unternommen:
 - Zuerst wurde der Verlauf der Gewinnwahrscheinlichkeiten der beiden Teams visualisiert
 - Im Schluss wurden die Plays die die Ursache dafür waren, dass sich die Gewinnwahrscheinlichkeit ändert extrahiert und analysiert
+
 Im letztem Teil des Notebooks wurde das beste "Passing-Play" (keine Passing Touchdowns) aus der Saison 2022 ermittelt. Dazu wurden allle Passing-Plays aus der saison gefiltertund das Play mit höchsten Einfluss auf die Gewinnwahrscheinlichkeit wurde herausgesucht.
 Ein Play hatte einen höheren Einflusss auf die Wahrscheinlichkeit, als das play das in meiner Arbeit erwähnt wurde. Dies lag aber daran, dass das Play nicht als Touchdown-Pass von der API vermekt wurde. 
 
